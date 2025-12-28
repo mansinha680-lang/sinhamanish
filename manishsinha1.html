@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class 10 Green Skills Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2e7d32;
+        }
+        .question {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 25px;
+            font-size: 16px;
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #result {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Class 10 – Green Skills Quiz</h1>
+
+<form id="quizForm">
+
+    <div class="question">
+        <p>1. What are Green Skills?</p>
+        <input type="radio" name="q1" value="0"> Skills related to computer programming<br>
+        <input type="radio" name="q1" value="1"> Skills that promote environmental sustainability<br>
+        <input type="radio" name="q1" value="0"> Skills for business management<br>
+        <input type="radio" name="q1" value="0"> Skills related to sports<br>
+    </div>
+
+    <div class="question">
+        <p>2. Which of the following is a renewable resource?</p>
+        <input type="radio" name="q2" value="0"> Coal<br>
+        <input type="radio" name="q2" value="0"> Petroleum<br>
+        <input type="radio" name="q2" value="1"> Solar energy<br>
+        <input type="radio" name="q2" value="0"> Natural gas<br>
+    </div>
+
+    <div class="question">
+        <p>3. The main aim of Green Skills is to:</p>
+        <input type="radio" name="q3" value="0"> Increase industrial production<br>
+        <input type="radio" name="q3" value="1"> Reduce environmental impact<br>
+        <input type="radio" name="q3" value="0"> Promote urbanization<br>
+        <input type="radio" name="q3" value="0"> Increase profits only<br>
+    </div>
+
+    <div class="question">
+        <p>4. Which practice helps in conserving water?</p>
+        <input type="radio" name="q4" value="0"> Leaving taps open<br>
+        <input type="radio" name="q4" value="1"> Rainwater harvesting<br>
+        <input type="radio" name="q4" value="0"> Excessive irrigation<br>
+        <input type="radio" name="q4" value="0"> Cutting trees<br>
+    </div>
+
+    <div class="question">
+        <p>5. What does the 3R principle stand for?</p>
+        <input type="radio" name="q5" value="1"> Reduce, Reuse, Recycle<br>
+        <input type="radio" name="q5" value="0"> Remove, Replace, Rebuild<br>
+        <input type="radio" name="q5" value="0"> Reduce, Repair, Replace<br>
+        <input type="radio" name="q5" value="0"> Reuse, Rebuild, Restore<br>
+    </div>
+
+    <div class="question">
+        <p>6. Which activity helps reduce carbon footprint?</p>
+        <input type="radio" name="q6" value="0"> Using plastic bags<br>
+        <input type="radio" name="q6" value="1"> Walking or cycling for short distances<br>
+        <input type="radio" name="q6" value="0"> Burning waste<br>
+        <input type="radio" name="q6" value="0"> Excessive electricity use<br>
+    </div>
+
+    <div class="question">
+        <p>7. Sustainable development means:</p>
+        <input type="radio" name="q7" value="0"> Using all resources quickly<br>
+        <input type="radio" name="q7" value="0"> Development without caring for nature<br>
+        <input type="radio" name="q7" value="1"> Meeting present needs without harming future needs<br>
+        <input type="radio" name="q7" value="0"> Only economic growth<br>
+    </div>
+
+    <div class="question">
+        <p>8. Which sector provides green jobs?</p>
+        <input type="radio" name="q8" value="1"> Renewable energy sector<br>
+        <input type="radio" name="q8" value="0"> Tobacco industry<br>
+        <input type="radio" name="q8" value="0"> Plastic manufacturing<br>
+        <input type="radio" name="q8" value="0"> Coal mining<br>
+    </div>
+
+    <div class="question">
+        <p>9. Which gas is mainly responsible for global warming?</p>
+        <input type="radio" name="q9" value="0"> Oxygen<br>
+        <input type="radio" name="q9" value="0"> Nitrogen<br>
+        <input type="radio" name="q9" value="1"> Carbon dioxide<br>
+        <input type="radio" name="q9" value="0"> Hydrogen<br>
+    </div>
+
+    <div class="question">
+        <p>10. Planting trees helps in:</p>
+        <input type="radio" name="q10" value="0"> Increasing air pollution<br>
+        <input type="radio" name="q10" value="0"> Soil erosion<br>
+        <input type="radio" name="q10" value="1"> Absorbing carbon dioxide<br>
+        <input type="radio" name="q10" value="0"> Reducing rainfall<br>
+    </div>
+
+    <button type="button" onclick="checkResult()">Submit Quiz</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+    function checkResult() {
+        let score = 0;
+        const answers = document.querySelectorAll('input[type="radio"]:checked');
+
+        answers.forEach(answer => {
+            score += Number(answer.value);
+        });
+
+        document.getElementById("result").innerText =
+            "Your Score: " + score + " out of 10";
+    }
+</script>
+
+</body>
+</html>
